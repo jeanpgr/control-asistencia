@@ -1,7 +1,10 @@
 import { RegisterType } from "../types";
 
 export const API_BASE_URL = "https://asistencia.ws-dragoncentury.info";
-export const API_DATE_TIME = "https://worldtimeapi.org/api/timezone/America/Guayaquil";
+export const TIME_APIS = [
+  { url: "https://worldtimeapi.org/api/timezone/America/Guayaquil", field: "datetime" },
+  { url: "https://timeapi.io/api/Time/current/zone?timeZone=America/Guayaquil", field: "dateTime" }
+];
 
 export const REGISTER_TYPES: { value: RegisterType; label: string }[] = [
   { value: "ENTRADA_LABORAL", label: "ENTRADA LABORAL" },

@@ -31,7 +31,7 @@ function AttendanceList() {
 
       const data = await fetchAttendances();
       setAttendances(data);
-      console.log('Attendances:', data);
+      
       // Agrupar registros por fecha
       const grouped = data.reduce((acc: GroupedAttendance, attendance: Attendance) => {
         const date = attendance.date_time.split(' ')[0];
